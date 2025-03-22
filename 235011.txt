@@ -1,0 +1,141 @@
+Почетни поставувања:
+
+mkdir SI_2025_lab1_ТВОЈ_ИНДЕКС
+cd SI_2025_lab1_ТВОЈ_ИНДЕКС
+git init
+
+-поврзување со Github remote repo
+git remote add origin https://github.com/abalikj/SI_2025_lab1_235011.git
+
+nano README.md
+echo "Аида Балиќ 235011" > README.md
+git add README.md
+git commit -m "Initial commit"
+git push origin master
+
+
+$ curl -L -o prezemena "https://drive.google.com/uc?export=download&id=1odBPKE0HnkLB-BSwEw6RnIHqtZOjrcne"
+mv  prezemena SI2025Lab1Main.java
+git add SI2025Lab1Main.java
+git commit -m "Add starter code"
+git push origin master
+
+
+
+Дел 1:
+
+Откако креирав проект со име SI2025 , ги додадов 9 те issues vo Backlog za sekoj od metodite , funkciite, избрав 3 и ги ставив во In progress. Потоа генерирав гранки од нив три.
+
+git fetch origin   -- напрвив локално превземање на гранките
+
+git checkout 1-remove-a-task-by-name   се префрлувам на оваа гранка
+branch '1-remove-a-task-by-name' set up to track 'origin/1-remove-a-task-by-name
+'.
+Switched to a new branch '1-remove-a-task-by-name'
+
+
+$ git checkout master    се префрлувам на мастер гранка
+Switched to branch 'master'
+
+
+$ git fetch origin
+From https://github.com/abalikj/SI_2025_lab1_235011
+ * [new branch]      2-find-all-completed-tasks -> origin/2-find-all-completed-t
+asks
+ * [new branch]      3-list-tasks-sorted-by-name -> origin/3-list-tasks-sorted-b
+y-name
+
+git branch -r           ги листам гранките на ремоте репото
+  origin/1-remove-a-task-by-name
+  origin/2-find-all-completed-tasks
+  origin/3-list-tasks-sorted-by-name
+  origin/HEAD -> origin/master
+  origin/master
+
+Дел 2:
+
+13.git fetch origin   -- напрвив локално превземање на гранките
+14.$ git checkout 1-remove-a-task-by-name    --се префрлив на првата гранка
+15.ја имплемемтирав методат за оваа гранка во функијата односно во класата TaskManager 
+nano  SI2025Lab1Main.java
+16. направив комит 
+git add  SI2025Lab1Main.java
+
+$ git commit -m "Implement removeTask"
+
+17.
+$ git push origin 1-remove-a-task-by-name
+
+18.креирав pullrequest na github odnosno so compare & pullrequest i cretae pullrequest
+
+19.za vtorata granka
+ git checkout 2-find-all-completed-tasks
+  nano  SI2025Lab1Main.java
+  git add  SI2025Lab1Main.java
+   git commit -m "Implement getCompletedTasks"
+   git push origin 2-find-all-completed-tasks
+
+
+za tretata granka
+
+ git checkout 3-list-tasks-sorted-by-name
+ nano  SI2025Lab1Main.java
+  git add  SI2025Lab1Main.java
+   git commit -m "Implement sortTasksByName"
+   git push origin 3-list-tasks-sorted-by-name
+
+
+20.Направив одобрив 2 pull request za grankite 2-find-all-completed-tasks i 3-list-tasks-sorted-by-name
+Кога ги споиv преку „Merge pull request“, GitHub автоматски ги додаде во master, и немаше конфликти, спојувањето се изврши без проблем.
+Ова значи дека тие PR-и не направиле спротивставени промени во истите линии на кодот.
+односно бидејки промените од  pull requests не се преклопуваат (не модифицираат исти делови од истата датотека, разлицни методи прават, менуваат во кодот).
+
+21.Da sega ne se vo in progress tuku vo Done
+22.
+Спој nа третата гранка локално
+
+git checkout master  -- se prefliv na master
+git merge 1-remove-a-task-by-name    --spoj na grankata so master
+git push origin master     --push na remote repo
+
+Третата гранка што ја споив локално со git merge
+немаше конфликти, значи дека ниту оваа гранка немаше промени што се судираат со промените од веќе споените PR-и.
+git merge автоматски ги комбинира промените, и ако нема преклопувања во кодот, merge се извршува со (fast-forward).
+
+23.git push origin master    --синхр. мастер со ремоте репо
+
+24.Даа сите се Done.
+
+25.
+git log --oneline --graph --all > logs.txt
+cp ~Desktop/dokumentacija.txt 235011.txt
+git add logs.txt 235011.txt
+git commit -m "Final commit"
+git push origin master
+
+
+26.Sinhr.  git push origin master
+
+27.
+fork од репозиториумот https://github.com/stefanandonov/SI_2025_lab1_151020. 
+
+28.
+Клонирање на fork-от локално
+
+git clone https://github.com/abalikj/SI_2025_lab1_151020.git
+cd SI_2025_lab1_151020
+
+29.
+echo "АидаБалиќ" > 235011.txt
+git add 235011.txt
+git commit -m "Add file"
+git push origin master
+
+30.
+git push origin master
+
+31.
+на fork-от
+Contribute → Create Pull Request
+
+32.  Само број на индекс Create PR

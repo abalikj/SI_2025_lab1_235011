@@ -1,0 +1,15 @@
+*   cc8e055 Merge branch '1-remove-a-task-by-name' into master
+|\  
+| * a74b444 Implement removeTask
+* |   5e9e656 Merge pull request #11 from abalikj/2-find-all-completed-tasks
+|\ \  
+| * | 04dfc96 Implement getCompletedTasks
+| |/  
+* |   bdf2628 Merge pull request #12 from abalikj/3-list-tasks-sorted-by-name
+|\ \  
+| |/  
+|/|   
+| * bd7b797 Implement sortTasksByName
+|/  
+* 02b19f6 Add starter code
+* 182a991 Initial commit
